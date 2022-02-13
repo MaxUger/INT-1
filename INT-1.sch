@@ -257,7 +257,7 @@ L Device:C_Small C4
 U 1 1 6204D876
 P 600 4350
 F 0 "C4" H 692 4396 50  0000 L CNN
-F 1 "10uF" H 692 4305 50  0000 L CNN
+F 1 "4.7uF" H 692 4305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 600 4350 50  0001 C CNN
 F 3 "~" H 600 4350 50  0001 C CNN
 	1    600  4350
@@ -285,63 +285,36 @@ F 3 "~" H 1550 4350 50  0001 C CNN
 	1    1550 4350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C7
-U 1 1 62050A82
-P 2000 4350
-F 0 "C7" H 2092 4396 50  0000 L CNN
-F 1 "0.1uF" H 2092 4305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2000 4350 50  0001 C CNN
-F 3 "~" H 2000 4350 50  0001 C CNN
-	1    2000 4350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 4250 1550 4250
 Connection ~ 1100 4250
 Wire Wire Line
 	1100 4250 600  4250
-Connection ~ 1550 4250
-Wire Wire Line
-	1550 4250 1300 4250
 Wire Wire Line
 	600  4450 1100 4450
 Connection ~ 1100 4450
 Wire Wire Line
-	1100 4450 1300 4450
-Connection ~ 1550 4450
-Wire Wire Line
-	1550 4450 2000 4450
-Wire Wire Line
-	1300 4250 1300 4050
-Connection ~ 1300 4250
-Wire Wire Line
-	1300 4250 1100 4250
+	1100 4250 1100 4050
 $Comp
 L power:+5V #PWR0108
 U 1 1 62052A7B
-P 1300 4050
-F 0 "#PWR0108" H 1300 3900 50  0001 C CNN
-F 1 "+5V" H 1315 4223 50  0000 C CNN
-F 2 "" H 1300 4050 50  0001 C CNN
-F 3 "" H 1300 4050 50  0001 C CNN
-	1    1300 4050
+P 1100 4050
+F 0 "#PWR0108" H 1100 3900 50  0001 C CNN
+F 1 "+5V" H 1115 4223 50  0000 C CNN
+F 2 "" H 1100 4050 50  0001 C CNN
+F 3 "" H 1100 4050 50  0001 C CNN
+	1    1100 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 4450 1300 4650
-Connection ~ 1300 4450
-Wire Wire Line
-	1300 4450 1550 4450
+	1100 4450 1100 4650
 $Comp
 L power:GND #PWR0109
 U 1 1 6205416B
-P 1300 4650
-F 0 "#PWR0109" H 1300 4400 50  0001 C CNN
-F 1 "GND" H 1305 4477 50  0000 C CNN
-F 2 "" H 1300 4650 50  0001 C CNN
-F 3 "" H 1300 4650 50  0001 C CNN
-	1    1300 4650
+P 1100 4650
+F 0 "#PWR0109" H 1100 4400 50  0001 C CNN
+F 1 "GND" H 1105 4477 50  0000 C CNN
+F 2 "" H 1100 4650 50  0001 C CNN
+F 3 "" H 1100 4650 50  0001 C CNN
+	1    1100 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -443,19 +416,12 @@ Wire Wire Line
 Wire Wire Line
 	3550 6700 3450 6700
 Wire Wire Line
-	3450 6700 3450 6300
-Connection ~ 3450 6300
-Wire Wire Line
-	3450 6300 4250 6300
-Wire Wire Line
 	2000 6150 2000 6300
-Wire Wire Line
-	2000 6300 3450 6300
 Connection ~ 2000 6300
 Wire Wire Line
 	2000 6300 2000 6350
 Wire Wire Line
-	1850 6400 4300 6400
+	1850 6400 3450 6400
 Wire Wire Line
 	1850 6250 1850 6400
 Wire Wire Line
@@ -1050,22 +1016,33 @@ Text GLabel 6250 5100 0    50   Input ~ 0
 ROW4
 Text GLabel 6250 2300 0    50   Input ~ 0
 ROW0
-Text GLabel 3700 2000 2    50   Input ~ 0
-COL0
-Text GLabel 3700 2100 2    50   Input ~ 0
-COL1
-Text GLabel 3700 2200 2    50   Input ~ 0
-COL2
-Text GLabel 3700 2300 2    50   Input ~ 0
-COL3
-Text GLabel 3700 2400 2    50   Input ~ 0
-ROW0
-Text GLabel 3700 2500 2    50   Input ~ 0
-ROW1
-Text GLabel 3700 2600 2    50   Input ~ 0
-ROW2
 Text GLabel 3700 2700 2    50   Input ~ 0
+COL0
+Text GLabel 3700 2600 2    50   Input ~ 0
+COL1
+Text GLabel 3700 2500 2    50   Input ~ 0
+COL2
+Text GLabel 3700 2100 2    50   Input ~ 0
+COL3
+Text GLabel 3700 2200 2    50   Input ~ 0
+ROW0
+Text GLabel 3700 2300 2    50   Input ~ 0
+ROW1
+Text GLabel 3700 2400 2    50   Input ~ 0
+ROW2
+Text GLabel 3700 3300 2    50   Input ~ 0
 ROW3
-Text GLabel 3700 2900 2    50   Input ~ 0
+Text GLabel 3700 3200 2    50   Input ~ 0
 ROW4
+Wire Wire Line
+	1100 4250 1550 4250
+Wire Wire Line
+	1100 4450 1550 4450
+Wire Wire Line
+	2000 6300 4250 6300
+Wire Wire Line
+	3450 6700 3450 6400
+Connection ~ 3450 6400
+Wire Wire Line
+	3450 6400 4300 6400
 $EndSCHEMATC
